@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.beacon.boot</groupId>
+        <artifactId>beacon-commons</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>beacon-common-operatelog</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>操作日志</description>
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.beacon.boot</groupId>
+            <artifactId>beacon-common</artifactId>
+        </dependency>
+
+        <!-- Spring 核心 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <!-- Web 相关 -->
+        <dependency>
+            <groupId>com.beacon.boot</groupId>
+            <artifactId>beacon-common-web</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- 以下为业务组件 -->
+
+        <!-- 需要使用它，进行操作日志的记录 -->
+        <dependency>
+            <groupId>com.beacon.boot</groupId>
+            <artifactId>beacon-business-system-api</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <!-- 工具类相关 -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

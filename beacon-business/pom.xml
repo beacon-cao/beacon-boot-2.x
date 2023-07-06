@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.beacon.boot</groupId>
+        <artifactId>beacon-boot</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <name>${project.artifactId}</name>
+
+    <artifactId>beacon-business</artifactId>
+    <packaging>pom</packaging>
+    <description>
+        该module下的内容为业务内容，根据功能模块进行划分。
+    </description>
+
+    <modules>
+        <module>beacon-business-system</module>
+        <module>beacon-business-infra</module>
+        <module>beacon-business-bmp</module>
+    </modules>
+
+
+
+</project>

@@ -1,0 +1,2 @@
+com.beacon.framework.datasource.config.DataSourceAutoConfiguration
+com.beacon.framework.mybatis.config.MybatisAutoConfiguration

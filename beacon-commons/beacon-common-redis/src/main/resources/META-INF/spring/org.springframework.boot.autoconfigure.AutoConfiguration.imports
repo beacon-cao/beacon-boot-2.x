@@ -1,0 +1,2 @@
+com.beacon.framework.redis.config.YudaoRedisAutoConfiguration
+com.beacon.framework.redis.config.YudaoCacheAutoConfiguration

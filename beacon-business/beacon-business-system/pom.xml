@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.beacon.boot</groupId>
+        <artifactId>beacon-business</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>beacon-business-system</artifactId>
+    <packaging>pom</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        system 模块下为通用业务，支撑上层的核心业务,包含对外提供的api模块以及业务逻辑biz模块
+    </description>
+    <modules>
+        <module>beacon-business-system-api</module>
+        <module>beacon-business-system-biz</module>
+    </modules>
+
+</project>

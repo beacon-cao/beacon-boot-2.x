@@ -1,0 +1,6 @@
+com.beacon.framework.apilog.config.ApiLogAutoConfiguration
+com.beacon.framework.jackson.config.JacksonAutoConfiguration
+com.github.xiaoymin.knife4j.spring.configuration.Knife4jAutoConfiguration
+com.beacon.framework.swagger.config.SwaggerAutoConfiguration
+com.beacon.framework.web.config.WebAutoConfiguration
+com.beacon.framework.xss.config.XssAutoConfiguration

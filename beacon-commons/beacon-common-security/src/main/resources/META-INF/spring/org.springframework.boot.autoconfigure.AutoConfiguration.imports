@@ -1,0 +1,2 @@
+com.beacon.framework.security.config.SecurityAutoConfiguration
+com.beacon.framework.security.config.WebSecurityConfigurerAdapter

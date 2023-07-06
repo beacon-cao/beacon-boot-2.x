@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.beacon.boot</groupId>
+        <artifactId>beacon-boot</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>beacon-server</artifactId>
+
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        后端 Server 的主项目，通过引入需要 beacon-business-xxx 的依赖，从而实现提供 restful API 给前端项目。
+        本质上来说，beacon-server 是个空壳，是一个容器，不包含具体业务逻辑！
+    </description>
+
+    <dependencies>
+        <!-- 引入后台管理系统业务模块-->
+        <dependency>
+            <groupId>com.beacon.boot</groupId>
+            <artifactId>beacon-business-system-biz</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--引入基础设施模块-->
+        <dependency>
+            <groupId>com.beacon.boot</groupId>
+            <artifactId>beacon-business-infra-biz</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beacon.boot</groupId>
+            <artifactId>beacon-business-bmp-biz</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- spring boot 配置所需依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+</project>
