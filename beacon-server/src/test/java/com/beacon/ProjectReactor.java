@@ -18,8 +18,6 @@ import static java.io.File.separator;
 
 /**
  * 项目修改器，一键替换 Maven 的 groupId、artifactId，项目的 package 等
- * <p>
- * 通过修改 groupIdNew、artifactIdNew、projectBaseDirNew 三个变量
  *
  * @author Beacon
  */
@@ -30,8 +28,11 @@ public class ProjectReactor {
     private static final String ARTIFACT_ID = "beacon";
     private static final String PACKAGE_NAME = "com.beacon";
 
-    //该字段为前端项目中的内容，若需要修改请将前端项目放置项目根目录
-    private static final String TITLE = "Open-Beacon快速开发脚手架";
+
+    /**
+     * 该字段为前端项目中的内容，若需要修改请将前端项目放置项目根目录
+     * */
+    private static final String TITLE = "BeaconBoot快速开发脚手架";
 
     /**
      * 白名单文件，不进行重写，避免出问题
@@ -42,7 +43,6 @@ public class ProjectReactor {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
 
-        //新的路径名称
         //pom文件中的 【group_id】
         String groupIdNew = "com.hello.boot";
         //修改项目模块前缀  例如：beacon-business 中的【beacon】
@@ -119,9 +119,7 @@ public class ProjectReactor {
         return files;
     }
 
-    private static String replaceFileContent(File file, String groupIdNew,
-                                             String artifactIdNew, String packageNameNew,
-                                             String titleNew) {
+    private static String replaceFileContent(File file, String groupIdNew, String artifactIdNew, String packageNameNew, String titleNew) {
         String content = FileUtil.readString(file, StandardCharsets.UTF_8);
         // 如果是白名单的文件类型，不进行重写
         String fileType = FileTypeUtil.getType(file);
@@ -137,24 +135,20 @@ public class ProjectReactor {
                 .replaceAll(TITLE, titleNew);
     }
 
-    private static void writeFile(File file, String fileContent, String projectBaseDir,
-                                  String projectBaseDirNew, String packageNameNew, String artifactIdNew) {
+    private static void writeFile(File file, String fileContent, String projectBaseDir, String projectBaseDirNew, String packageNameNew, String artifactIdNew) {
         String newPath = buildNewFilePath(file, projectBaseDir, projectBaseDirNew, packageNameNew, artifactIdNew);
         FileUtil.writeUtf8String(fileContent, newPath);
     }
 
-    private static void copyFile(File file, String projectBaseDir,
-                                 String projectBaseDirNew, String packageNameNew, String artifactIdNew) {
+    private static void copyFile(File file, String projectBaseDir, String projectBaseDirNew, String packageNameNew, String artifactIdNew) {
         String newPath = buildNewFilePath(file, projectBaseDir, projectBaseDirNew, packageNameNew, artifactIdNew);
         FileUtil.copyFile(file, new File(newPath));
     }
 
-    private static String buildNewFilePath(File file, String projectBaseDir,
-                                           String projectBaseDirNew, String packageNameNew, String artifactIdNew) {
+    private static String buildNewFilePath(File file, String projectBaseDir, String projectBaseDirNew, String packageNameNew, String artifactIdNew) {
         return file.getPath().replace(projectBaseDir, projectBaseDirNew) // 新目录
-                .replace(PACKAGE_NAME.replaceAll("\\.", Matcher.quoteReplacement(separator)),
-                        packageNameNew.replaceAll("\\.", Matcher.quoteReplacement(separator)))
-                .replace(ARTIFACT_ID, artifactIdNew) //
+                .replace(PACKAGE_NAME.replaceAll("\\.", Matcher.quoteReplacement(separator)), packageNameNew.replaceAll("\\.", Matcher.quoteReplacement(separator)))
+                .replace(ARTIFACT_ID, artifactIdNew)
                 .replaceAll(StrUtil.upperFirst(ARTIFACT_ID), StrUtil.upperFirst(artifactIdNew));
     }
 
