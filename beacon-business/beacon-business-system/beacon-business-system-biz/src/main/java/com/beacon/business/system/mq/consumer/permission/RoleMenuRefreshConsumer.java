@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 
 /**
  * 针对 {@link RoleMenuRefreshMessage} 的消费者
- *
+ * 使用mq调用初始化缓存方法的目的是确保项启动多个节点的缓存数据都可以刷新
  * @author Beacon
  */
 @Component
