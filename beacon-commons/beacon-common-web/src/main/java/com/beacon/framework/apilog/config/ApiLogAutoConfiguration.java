@@ -35,10 +35,8 @@ public class ApiLogAutoConfiguration {
      * 创建 ApiAccessLogFilter Bean，记录 API 请求日志
      */
     @Bean
-    @ConditionalOnProperty(prefix = "framework.access-log", value = "enable", matchIfMissing = true) // 允许使用 yudao.access-log.enable=false 禁用访问日志
-    public FilterRegistrationBean<ApiAccessLogFilter> apiAccessLogFilter(WebProperties webProperties,
-                                                                         @Value("${spring.application.name}") String applicationName,
-                                                                         ApiAccessLogFrameworkService apiAccessLogFrameworkService) {
+    @ConditionalOnProperty(prefix = "framework.access-log", value = "enable", matchIfMissing = true) // 允许使用 framework.access-log.enable=false 禁用访问日志
+    public FilterRegistrationBean<ApiAccessLogFilter> apiAccessLogFilter(WebProperties webProperties, @Value("${spring.application.name}") String applicationName, ApiAccessLogFrameworkService apiAccessLogFrameworkService) {
         ApiAccessLogFilter filter = new ApiAccessLogFilter(webProperties, applicationName, apiAccessLogFrameworkService);
         return createFilterBean(filter, WebFilterOrderEnum.API_ACCESS_LOG_FILTER);
     }

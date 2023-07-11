@@ -1,6 +1,7 @@
 package com.beacon.business.system.controller.admin.auth;
 
 import cn.hutool.core.util.StrUtil;
+import com.baomidou.dynamic.datasource.annotation.Master;
 import com.beacon.business.system.controller.admin.auth.vo.AuthLoginReqVO;
 import com.beacon.business.system.controller.admin.auth.vo.AuthLoginRespVO;
 import com.beacon.business.system.controller.admin.auth.vo.AuthMenuRespVO;

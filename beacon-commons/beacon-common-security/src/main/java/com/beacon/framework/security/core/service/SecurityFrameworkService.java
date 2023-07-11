@@ -42,7 +42,8 @@ public interface SecurityFrameworkService {
     boolean hasAnyRoles(String... roles);
 
     /**
-     * 判断是否有授权
+     * 关联 system_oauth2_client 表的 scopes
+     * 用于第三方接口授权判断是否有授权
      *
      * @param scope 授权
      * @return 是否
