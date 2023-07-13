@@ -18,6 +18,7 @@ import static java.io.File.separator;
 
 /**
  * 项目修改器，一键替换 Maven 的 groupId、artifactId，项目的 package 等
+ * 通过修改 groupIdNew、artifactIdNew、projectBaseDirNew 三个变量
  *
  * @author Beacon
  */
@@ -43,6 +44,7 @@ public class ProjectReactor {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
 
+        //新的路径名称
         //pom文件中的 【group_id】
         String groupIdNew = "com.hello.boot";
         //修改项目模块前缀  例如：beacon-business 中的【beacon】
