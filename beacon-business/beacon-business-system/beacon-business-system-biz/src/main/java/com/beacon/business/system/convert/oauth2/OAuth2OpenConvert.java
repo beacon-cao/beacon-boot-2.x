@@ -50,8 +50,7 @@ public interface OAuth2OpenConvert {
             scopes.add(new KeyValue<>(scope, approve != null ? approve.getApproved() : false));
         });
         // 拼接返回
-        return new OAuth2OpenAuthorizeInfoRespVO(
-                new OAuth2OpenAuthorizeInfoRespVO.Client(client.getName(), client.getLogo()), scopes);
+        return new OAuth2OpenAuthorizeInfoRespVO(new OAuth2OpenAuthorizeInfoRespVO.Client(client.getName(), client.getLogo()), scopes);
     }
 
 }

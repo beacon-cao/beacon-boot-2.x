@@ -117,8 +117,7 @@ public class OAuth2OpenController {
 
         // 1.2 校验客户端
         String[] clientIdAndSecret = obtainBasicAuthorization(request);
-        OAuth2ClientDO client = oauth2ClientService.validOAuthClientFromCache(clientIdAndSecret[0], clientIdAndSecret[1],
-                grantType, scopes, redirectUri);
+        OAuth2ClientDO client = oauth2ClientService.validOAuthClientFromCache(clientIdAndSecret[0], clientIdAndSecret[1], grantType, scopes, redirectUri);
 
         // 2. 根据授权模式，获取访问令牌
         OAuth2AccessTokenDO accessTokenDO;
@@ -184,7 +183,7 @@ public class OAuth2OpenController {
      */
     @GetMapping("/authorize")
     @Operation(summary = "获得授权信息", description = "适合 code 授权码模式，或者 implicit 简化模式；在 sso.vue 单点登录界面被【获取】调用")
-    @Parameter(name = "clientId", required = true, description = "客户端编号", example = "tudou")
+    @Parameter(name = "clientId", required = true, description = "客户端编号", example = "open-beacon")
     public CommonResult<OAuth2OpenAuthorizeInfoRespVO> authorize(@RequestParam("clientId") String clientId) {
         // 0. 校验用户已经登录。通过 Spring Security 实现
 

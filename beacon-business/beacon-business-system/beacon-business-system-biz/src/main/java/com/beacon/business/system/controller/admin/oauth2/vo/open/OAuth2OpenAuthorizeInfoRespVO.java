@@ -27,10 +27,10 @@ public class OAuth2OpenAuthorizeInfoRespVO {
     @AllArgsConstructor
     public static class Client {
 
-        @Schema(description = "应用名", required = true, example = "土豆")
+        @Schema(description = "应用名", required = true, example = "Open-Beacon")
         private String name;
 
-        @Schema(description = "应用图标", required = true, example = "https://www.iocoder.cn/xx.png")
+        @Schema(description = "应用图标", required = true, example = "https://www.open-beacon.com/xx.png")
         private String logo;
 
     }
