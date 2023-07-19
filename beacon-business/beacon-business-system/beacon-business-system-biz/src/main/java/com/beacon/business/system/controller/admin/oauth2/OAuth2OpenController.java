@@ -88,7 +88,7 @@ public class OAuth2OpenController {
     @Parameters({
             @Parameter(name = "grant_type", required = true, description = "授权类型", example = "code"),
             @Parameter(name = "code", description = "授权范围", example = "userinfo.read"),
-            @Parameter(name = "redirect_uri", description = "重定向 URI", example = "https://www.iocoder.cn"),
+            @Parameter(name = "redirect_uri", description = "重定向 URI", example = "https://www.open-beacon.org"),
             @Parameter(name = "state", description = "状态", example = "1"),
             @Parameter(name = "username", example = "tudou"),
             @Parameter(name = "password", example = "cai"), // 多个使用空格分隔

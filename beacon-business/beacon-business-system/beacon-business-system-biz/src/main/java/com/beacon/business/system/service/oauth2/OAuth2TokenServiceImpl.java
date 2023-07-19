@@ -61,7 +61,7 @@ public class OAuth2TokenServiceImpl implements OAuth2TokenService {
             throw exception0(GlobalErrorCodeConstants.BAD_REQUEST.getCode(), "无效的刷新令牌");
         }
 
-        // 校验 Client 匹配    该步骤为单点登录预留逻辑目前没有意义
+        // 校验 Client 匹配    该步骤为用于单点登录时 clientId 校验
         OAuth2ClientDO clientDO = oauth2ClientService.validOAuthClientFromCache(clientId);
         if (ObjectUtil.notEqual(clientId, refreshTokenDO.getClientId())) {
             throw exception0(GlobalErrorCodeConstants.BAD_REQUEST.getCode(), "刷新令牌的客户端编号不正确");

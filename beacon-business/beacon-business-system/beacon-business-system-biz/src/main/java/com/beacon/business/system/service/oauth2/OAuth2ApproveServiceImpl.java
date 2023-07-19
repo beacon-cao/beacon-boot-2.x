@@ -84,15 +84,13 @@ public class OAuth2ApproveServiceImpl implements OAuth2ApproveService {
 
     @Override
     public List<OAuth2ApproveDO> getApproveList(Long userId, Integer userType, String clientId) {
-        List<OAuth2ApproveDO> approveDOs = oauth2ApproveMapper.selectListByUserIdAndUserTypeAndClientId(
-                userId, userType, clientId);
+        List<OAuth2ApproveDO> approveDOs = oauth2ApproveMapper.selectListByUserIdAndUserTypeAndClientId(userId, userType, clientId);
         approveDOs.removeIf(o -> DateUtils.isExpired(o.getExpiresTime()));
         return approveDOs;
     }
 
     @VisibleForTesting
-    void saveApprove(Long userId, Integer userType, String clientId,
-                     String scope, Boolean approved, LocalDateTime expireTime) {
+    void saveApprove(Long userId, Integer userType, String clientId, String scope, Boolean approved, LocalDateTime expireTime) {
         // 先更新
         OAuth2ApproveDO approveDO = new OAuth2ApproveDO().setUserId(userId).setUserType(userType)
                 .setClientId(clientId).setScope(scope).setApproved(approved).setExpiresTime(expireTime);

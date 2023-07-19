@@ -29,6 +29,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
+            <!--该依赖是可选的 设置为true则标识不传递依赖-->
             <optional>true</optional>
         </dependency>
 
