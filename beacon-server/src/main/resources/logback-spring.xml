@@ -15,6 +15,8 @@
         </encoder>
     </appender>
 
+    <!-- 了解更多关于logback的知识查看：https://blog.csdn.net/white_ice/article/details/85065219 -->
+
     <!-- 文件 Appender -->
     <!-- 参考 Spring Boot 的 file-appender.xml 编写 -->
     <appender name="FILE"  class="ch.qos.logback.core.rolling.RollingFileAppender">

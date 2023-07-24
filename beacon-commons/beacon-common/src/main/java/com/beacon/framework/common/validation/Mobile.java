@@ -14,9 +14,8 @@ import java.lang.annotation.*;
 })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Constraint(
-        validatedBy = MobileValidator.class
-)
+//指定参数验证器
+@Constraint(validatedBy = MobileValidator.class)
 public @interface Mobile {
 
     String message() default "手机号格式不正确";

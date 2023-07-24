@@ -6,6 +6,11 @@ import com.beacon.framework.common.util.validation.ValidationUtils;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
+
+/**
+ * @see com.beacon.framework.common.validation.Mobile 注解的参数验证器
+ * @author beacon
+ * */
 public class MobileValidator implements ConstraintValidator<Mobile, String> {
 
     @Override

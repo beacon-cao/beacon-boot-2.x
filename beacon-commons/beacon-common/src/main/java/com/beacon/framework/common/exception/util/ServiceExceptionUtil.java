@@ -92,10 +92,15 @@ public class ServiceExceptionUtil {
      */
     @VisibleForTesting
     public static String doFormat(int code, String messagePattern, Object... params) {
-        StringBuilder sbuf = new StringBuilder(messagePattern.length() + 50);
+        //构造一个format结果
+        StringBuilder formatResult = new StringBuilder(messagePattern.length() + 50);
+
+        //循环处理消息模板用到的参数
         int i = 0;
         int j;
         int l;
+
+        //以{}作为分隔符，切断 messagePattern 挨个对{}进行赋值并保存至新的字符串中
         for (l = 0; l < params.length; l++) {
             j = messagePattern.indexOf("{}", i);
             if (j == -1) {
@@ -103,20 +108,20 @@ public class ServiceExceptionUtil {
                 if (i == 0) {
                     return messagePattern;
                 } else {
-                    sbuf.append(messagePattern.substring(i));
-                    return sbuf.toString();
+                    formatResult.append(messagePattern.substring(i));
+                    return formatResult.toString();
                 }
             } else {
-                sbuf.append(messagePattern, i, j);
-                sbuf.append(params[l]);
+                formatResult.append(messagePattern, i, j);
+                formatResult.append(params[l]);
                 i = j + 2;
             }
         }
         if (messagePattern.indexOf("{}", i) != -1) {
             log.error("[doFormat][参数过少：错误码({})|错误内容({})|参数({})", code, messagePattern, params);
         }
-        sbuf.append(messagePattern.substring(i));
-        return sbuf.toString();
+        formatResult.append(messagePattern.substring(i));
+        return formatResult.toString();
     }
 
 }
