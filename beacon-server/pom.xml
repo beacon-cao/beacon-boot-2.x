@@ -48,4 +48,8 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <finalName>beacon-server</finalName>
+    </build>
+
 </project>

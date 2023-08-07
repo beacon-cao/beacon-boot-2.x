@@ -88,6 +88,13 @@
     <dependencyManagement>
         <dependencies>
 
+            <!--数据脱敏-->
+            <dependency>
+                <groupId>com.beacon.boot</groupId>
+                <artifactId>beacon-common-desensitize</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
             <!-- 工作流相关 -->
             <dependency>
                 <groupId>com.beacon.boot</groupId>

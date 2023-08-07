@@ -1,7 +1,6 @@
 package com.beacon.business.system.dal.dataobject.social;
 
 import com.beacon.framework.mybatis.core.dataobject.BaseDO;
-import com.beacon.business.system.enums.social.SocialTypeEnum;
 import com.baomidou.mybatisplus.annotation.KeySequence;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -29,7 +28,6 @@ public class SocialUserDO extends BaseDO {
     /**
      * 社交平台的类型
      *
-     * 枚举 {@link SocialTypeEnum}
      */
     private Integer type;
 
