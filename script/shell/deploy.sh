@@ -146,7 +146,7 @@ function healthCheck() {
 function deploy() {
     cd $BASE_PATH
     # 备份原 jar
-    #backup
+    backup
     # 停止 Java 服务
     stop
     # 部署新 jar
