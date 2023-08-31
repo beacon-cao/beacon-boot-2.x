@@ -40,7 +40,7 @@ import java.util.Properties;
 @Slf4j
 @EnableScheduling // 启用定时任务，用于 RedisPendingMessageResendJob 重发消息
 @AutoConfiguration(after = YudaoRedisAutoConfiguration.class)
-public class YudaoMQAutoConfiguration {
+public class MQAutoConfiguration {
 
     @Bean
     public RedisMQTemplate redisMQTemplate(StringRedisTemplate redisTemplate,

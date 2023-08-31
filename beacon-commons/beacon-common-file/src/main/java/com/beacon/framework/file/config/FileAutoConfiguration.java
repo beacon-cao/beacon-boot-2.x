@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
  * @author Beacon
  */
 @AutoConfiguration
-public class YudaoFileAutoConfiguration {
+public class FileAutoConfiguration {
 
     @Bean
     public FileClientFactory fileClientFactory() {
