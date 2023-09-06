@@ -79,7 +79,6 @@ public class OAuth2OpenController {
      * 刷新 refresh_token 模式时：refreshToken 参数
      * 客户端 client_credentials 模式：scope 参数
      * 简化 implicit 模式时：不支持
-     *
      * 注意，默认需要传递 client_id + client_secret 参数
      */
     @PostMapping("/token")
