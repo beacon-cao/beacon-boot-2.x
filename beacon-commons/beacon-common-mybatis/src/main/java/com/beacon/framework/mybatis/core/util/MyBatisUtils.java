@@ -33,8 +33,8 @@ public class MyBatisUtils {
         Page<T> page = new Page<>(pageParam.getPageNo(), pageParam.getPageSize());
         // 排序字段
         if (!CollectionUtil.isEmpty(sortingFields)) {
-            page.addOrder(sortingFields.stream().map(sortingField -> SortingField.ORDER_ASC.equals(sortingField.getOrder()) ?
-                    OrderItem.asc(sortingField.getField()) : OrderItem.desc(sortingField.getField()))
+            page.addOrder(sortingFields.stream()
+                    .map(sortingField -> SortingField.ORDER_ASC.equals(sortingField.getOrder()) ? OrderItem.asc(sortingField.getField()) : OrderItem.desc(sortingField.getField()))
                     .collect(Collectors.toList()));
         }
         return page;

@@ -78,8 +78,7 @@ public class CodegenServiceImpl implements CodegenService {
         // 校验导入的表和字段非空
         validateTableInfo(tableInfo);
         // 校验是否已经存在
-        if (codegenTableMapper.selectByTableNameAndDataSourceConfigId(tableInfo.getName(),
-                dataSourceConfigId) != null) {
+        if (codegenTableMapper.selectByTableNameAndDataSourceConfigId(tableInfo.getName(), dataSourceConfigId) != null) {
             throw exception(CODEGEN_TABLE_EXISTS);
         }
 

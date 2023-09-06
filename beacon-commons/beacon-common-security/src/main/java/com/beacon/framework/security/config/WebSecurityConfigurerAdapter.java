@@ -129,11 +129,9 @@ public class WebSecurityConfigurerAdapter {
                 .antMatchers(buildAppApi("/**")).permitAll()
                 // ②：每个项目的自定义规则
                 .and().authorizeRequests(registry -> authorizeRequestsCustomizers.forEach(customizer -> customizer.customize(registry)))
-
                 // ③：兜底规则，必须认证
                 .authorizeRequests()
                 .anyRequest().authenticated();
-
         // 添加 Token Filter
         httpSecurity.addFilterBefore(authenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
 
@@ -147,8 +145,7 @@ public class WebSecurityConfigurerAdapter {
     private Multimap<HttpMethod, String> getPermitAllUrlsFromAnnotations() {
         Multimap<HttpMethod, String> result = HashMultimap.create();
         // 获得接口对应的 HandlerMethod 集合
-        RequestMappingHandlerMapping requestMappingHandlerMapping = (RequestMappingHandlerMapping)
-                applicationContext.getBean("requestMappingHandlerMapping");
+        RequestMappingHandlerMapping requestMappingHandlerMapping = (RequestMappingHandlerMapping) applicationContext.getBean("requestMappingHandlerMapping");
         Map<RequestMappingInfo, HandlerMethod> handlerMethodMap = requestMappingHandlerMapping.getHandlerMethods();
         // 获得有 @PermitAll 注解的接口
         for (Map.Entry<RequestMappingInfo, HandlerMethod> entry : handlerMethodMap.entrySet()) {

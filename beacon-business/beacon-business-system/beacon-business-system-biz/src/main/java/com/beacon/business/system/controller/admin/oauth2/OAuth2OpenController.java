@@ -150,8 +150,7 @@ public class OAuth2OpenController {
                                              @RequestParam("token") String token) {
         // 校验客户端
         String[] clientIdAndSecret = obtainBasicAuthorization(request);
-        OAuth2ClientDO client = oauth2ClientService.validOAuthClientFromCache(clientIdAndSecret[0], clientIdAndSecret[1],
-                null, null, null);
+        OAuth2ClientDO client = oauth2ClientService.validOAuthClientFromCache(clientIdAndSecret[0], clientIdAndSecret[1], null, null, null);
 
         // 删除访问令牌
         return success(oauth2GrantService.revokeToken(client.getClientId(), token));

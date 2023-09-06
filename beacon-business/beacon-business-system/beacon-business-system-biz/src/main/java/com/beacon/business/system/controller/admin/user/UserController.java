@@ -133,16 +133,14 @@ public class UserController {
     @Operation(summary = "导出用户")
     @PreAuthorize("@security.hasPermission('system:user:export')")
     @OperateLog(type = EXPORT)
-    public void exportUserList(@Validated UserExportReqVO reqVO,
-                               HttpServletResponse response) throws IOException {
+    public void exportUserList(@Validated UserExportReqVO reqVO, HttpServletResponse response) throws IOException {
         // 获得用户列表
         List<AdminUserDO> users = userService.getUserList(reqVO);
 
         // 获得拼接需要的数据
         Collection<Long> deptIds = convertList(users, AdminUserDO::getDeptId);
         Map<Long, DeptDO> deptMap = deptService.getDeptMap(deptIds);
-        Map<Long, AdminUserDO> deptLeaderUserMap = userService.getUserMap(
-                convertSet(deptMap.values(), DeptDO::getLeaderUserId));
+        Map<Long, AdminUserDO> deptLeaderUserMap = userService.getUserMap(convertSet(deptMap.values(), DeptDO::getLeaderUserId));
         // 拼接数据
         List<UserExcelVO> excelUsers = new ArrayList<>(users.size());
         users.forEach(user -> {
@@ -151,8 +149,7 @@ public class UserController {
             MapUtils.findAndThen(deptMap, user.getDeptId(), dept -> {
                 excelVO.setDeptName(dept.getName());
                 // 设置部门负责人的名字
-                MapUtils.findAndThen(deptLeaderUserMap, dept.getLeaderUserId(),
-                        deptLeaderUser -> excelVO.setDeptLeaderNickname(deptLeaderUser.getNickname()));
+                MapUtils.findAndThen(deptLeaderUserMap, dept.getLeaderUserId(), deptLeaderUser -> excelVO.setDeptLeaderNickname(deptLeaderUser.getNickname()));
             });
             excelUsers.add(excelVO);
         });
@@ -181,8 +178,7 @@ public class UserController {
             @Parameter(name = "updateSupport", description = "是否支持更新，默认为 false", example = "true")
     })
     @PreAuthorize("@security.hasPermission('system:user:import')")
-    public CommonResult<UserImportRespVO> importExcel(@RequestParam("file") MultipartFile file,
-                                                      @RequestParam(value = "updateSupport", required = false, defaultValue = "false") Boolean updateSupport) throws Exception {
+    public CommonResult<UserImportRespVO> importExcel(@RequestParam("file") MultipartFile file, @RequestParam(value = "updateSupport", required = false, defaultValue = "false") Boolean updateSupport) throws Exception {
         List<UserImportExcelVO> list = ExcelUtils.read(file, UserImportExcelVO.class);
         return success(userService.importUserList(list, updateSupport));
     }

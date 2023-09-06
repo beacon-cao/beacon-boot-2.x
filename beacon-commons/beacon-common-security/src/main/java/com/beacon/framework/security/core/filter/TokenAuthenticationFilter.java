@@ -25,7 +25,7 @@ import java.io.IOException;
 /**
  * Token 过滤器，验证 token 的有效性
  * 验证通过后，获得 {@link LoginUser} 信息，并加入到 Spring Security 上下文
- *
+ * 该 Filter 仅负责校验token的有效性不负责校验接口的访问权限，如有效则将用户信息设置在security上下文中
  * @author Beacon
  */
 @RequiredArgsConstructor
@@ -110,8 +110,7 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
         }
         // 构建模拟用户
         Long userId = Long.valueOf(token.substring(securityProperties.getMockSecret().length()));
-        return new LoginUser().setId(userId).setUserType(userType)
-                .setTenantId(WebFrameworkUtils.getTenantId(request));
+        return new LoginUser().setId(userId).setUserType(userType).setTenantId(WebFrameworkUtils.getTenantId(request));
     }
 
 }
