@@ -77,13 +77,15 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
             if (accessToken == null) {
                 return null;
             }
-            // 用户类型不匹配，无权限
+            // 用户类型不匹配，无权限 (请求头中的userType与token中的不一致)
             if (ObjectUtil.notEqual(accessToken.getUserType(), userType)) {
                 throw new AccessDeniedException("错误的用户类型");
             }
             // 构建登录用户
-            return new LoginUser().setId(accessToken.getUserId()).setUserType(accessToken.getUserType())
-                    .setTenantId(accessToken.getTenantId()).setScopes(accessToken.getScopes());
+            return new LoginUser()
+                    .setId(accessToken.getUserId())
+                    .setUserType(accessToken.getUserType())
+                    .setScopes(accessToken.getScopes());
         } catch (ServiceException serviceException) {
             // 校验 Token 不通过时，考虑到一些接口是无需登录的，所以直接返回 null 即可
             return null;
@@ -110,7 +112,7 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
         }
         // 构建模拟用户
         Long userId = Long.valueOf(token.substring(securityProperties.getMockSecret().length()));
-        return new LoginUser().setId(userId).setUserType(userType).setTenantId(WebFrameworkUtils.getTenantId(request));
+        return new LoginUser().setId(userId).setUserType(userType);
     }
 
 }

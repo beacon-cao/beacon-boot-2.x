@@ -284,8 +284,7 @@ public class AdminUserServiceImpl implements AdminUserService {
         return deptIds;
     }
 
-    private void validateUserForCreateOrUpdate(Long id, String username, String mobile, String email,
-                                              Long deptId, Set<Long> postIds) {
+    private void validateUserForCreateOrUpdate(Long id, String username, String mobile, String email, Long deptId, Set<Long> postIds) {
         // 校验用户存在
         validateUserExists(id);
         // 校验用户名唯一

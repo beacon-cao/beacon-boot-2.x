@@ -95,15 +95,17 @@ public class OAuth2OpenController {
             @Parameter(name = "refresh_token", example = "123424233"),
     })
     @OperateLog(enable = false) // 避免 Post 请求被记录操作日志
-    public CommonResult<OAuth2OpenAccessTokenRespVO> postAccessToken(HttpServletRequest request,
-                                                                     @RequestParam("grant_type") String grantType,
-                                                                     @RequestParam(value = "code", required = false) String code, // 授权码模式
-                                                                     @RequestParam(value = "redirect_uri", required = false) String redirectUri, // 授权码模式
-                                                                     @RequestParam(value = "state", required = false) String state, // 授权码模式
-                                                                     @RequestParam(value = "username", required = false) String username, // 密码模式
-                                                                     @RequestParam(value = "password", required = false) String password, // 密码模式
-                                                                     @RequestParam(value = "scope", required = false) String scope, // 密码模式
-                                                                     @RequestParam(value = "refresh_token", required = false) String refreshToken) { // 刷新模式
+    public CommonResult<OAuth2OpenAccessTokenRespVO> postAccessToken(
+            HttpServletRequest request,
+            @RequestParam("grant_type") String grantType,
+            @RequestParam(value = "code", required = false) String code, // 授权码模式
+            @RequestParam(value = "redirect_uri", required = false) String redirectUri, // 授权码模式
+            @RequestParam(value = "state", required = false) String state, // 授权码模式
+            @RequestParam(value = "username", required = false) String username, // 密码模式
+            @RequestParam(value = "password", required = false) String password, // 密码模式
+            @RequestParam(value = "scope", required = false) String scope, // 密码模式
+            @RequestParam(value = "refresh_token", required = false) String refreshToken) // 刷新模式
+    {
         List<String> scopes = OAuth2Utils.buildScopes(scope);
         // 1.1 校验授权类型
         OAuth2GrantTypeEnum grantTypeEnum = OAuth2GrantTypeEnum.getByGranType(grantType);

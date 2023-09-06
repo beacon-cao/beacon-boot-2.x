@@ -33,8 +33,7 @@ public class ValidationUtils {
     }
 
     public static boolean isXmlNCName(String str) {
-        return StringUtils.hasText(str)
-                && PATTERN_XML_NCNAME.matcher(str).matches();
+        return StringUtils.hasText(str) && PATTERN_XML_NCNAME.matcher(str).matches();
     }
 
     public static void validate(Validator validator, Object object, Class<?>... groups) {

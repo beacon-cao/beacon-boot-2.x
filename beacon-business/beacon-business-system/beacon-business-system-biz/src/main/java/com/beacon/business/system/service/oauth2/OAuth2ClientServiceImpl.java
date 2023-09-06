@@ -137,8 +137,7 @@ public class OAuth2ClientServiceImpl implements OAuth2ClientService {
     }
 
     @Override
-    public OAuth2ClientDO validOAuthClientFromCache(String clientId, String clientSecret,
-                                                    String authorizedGrantType, Collection<String> scopes, String redirectUri) {
+    public OAuth2ClientDO validOAuthClientFromCache(String clientId, String clientSecret, String authorizedGrantType, Collection<String> scopes, String redirectUri) {
         // 校验客户端存在、且开启
         OAuth2ClientDO client = clientCache.get(clientId);
 
