@@ -157,10 +157,6 @@ public class MenuServiceImpl implements MenuService {
         return menuMapper.selectList();
     }
 
-    @Override
-    public List<MenuDO> getMenuListByTenant(MenuListReqVO reqVO) {
-        return getMenuList(reqVO);
-    }
 
     @Override
     public List<MenuDO> getMenuList(MenuListReqVO reqVO) {
@@ -235,7 +231,6 @@ public class MenuServiceImpl implements MenuService {
 
     /**
      * 校验菜单是否合法
-     *
      * 1. 校验相同父菜单编号下，是否存在相同的菜单名
      *
      * @param name 菜单名字
@@ -259,9 +254,7 @@ public class MenuServiceImpl implements MenuService {
 
     /**
      * 初始化菜单的通用属性。
-     *
      * 例如说，只有目录或者菜单类型的菜单，才设置 icon
-     *
      * @param menu 菜单
      */
     private void initMenuProperty(MenuDO menu) {

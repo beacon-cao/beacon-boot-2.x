@@ -13,7 +13,6 @@ public interface ErrorCodeConstants {
     ErrorCode AUTH_LOGIN_BAD_CREDENTIALS = new ErrorCode(1002000000, "登录失败，账号密码不正确");
     ErrorCode AUTH_LOGIN_USER_DISABLED = new ErrorCode(1002000001, "登录失败，账号被禁用");
     ErrorCode AUTH_LOGIN_CAPTCHA_CODE_ERROR = new ErrorCode(1002000004, "验证码不正确，原因：{}");
-    ErrorCode AUTH_THIRD_LOGIN_NOT_BIND = new ErrorCode(1002000005, "未绑定账号，需要进行绑定");
     ErrorCode AUTH_TOKEN_EXPIRED = new ErrorCode(1002000006, "Token 已经过期");
     ErrorCode AUTH_MOBILE_NOT_EXISTS = new ErrorCode(1002000007, "手机号不存在");
 
@@ -98,25 +97,11 @@ public interface ErrorCodeConstants {
     ErrorCode SMS_CODE_IS_EXISTS = new ErrorCode(1002014006, "手机号已被使用");
     ErrorCode SMS_CODE_IS_UNUSED = new ErrorCode(1002014007, "验证码未被使用");
 
-    // ========== 租户信息 1002015000 ==========
-    ErrorCode TENANT_NOT_EXISTS = new ErrorCode(1002015000, "租户不存在");
-    ErrorCode TENANT_DISABLE = new ErrorCode(1002015001, "名字为【{}】的租户已被禁用");
-    ErrorCode TENANT_EXPIRE = new ErrorCode(1002015002, "名字为【{}】的租户已过期");
-    ErrorCode TENANT_CAN_NOT_UPDATE_SYSTEM = new ErrorCode(1002015003, "系统租户不能进行修改、删除等操作！");
-
-    // ========== 租户套餐 1002016000 ==========
-    ErrorCode TENANT_PACKAGE_NOT_EXISTS = new ErrorCode(1002016000, "租户套餐不存在");
-    ErrorCode TENANT_PACKAGE_USED = new ErrorCode(1002016001, "租户正在使用该套餐，请给租户重新设置套餐后再尝试删除");
-    ErrorCode TENANT_PACKAGE_DISABLE = new ErrorCode(1002016002, "名字为【{}】的租户套餐已被禁用");
 
     // ========== 错误码模块 1002017000 ==========
     ErrorCode ERROR_CODE_NOT_EXISTS = new ErrorCode(1002017000, "错误码不存在");
     ErrorCode ERROR_CODE_DUPLICATE = new ErrorCode(1002017001, "已经存在编码为【{}】的错误码");
 
-    // ========== 社交用户 1002018000 ==========
-    ErrorCode SOCIAL_USER_AUTH_FAILURE = new ErrorCode(1002018000, "社交授权失败，原因是：{}");
-    ErrorCode SOCIAL_USER_UNBIND_NOT_SELF = new ErrorCode(1002018001, "社交解绑失败，非当前用户绑定");
-    ErrorCode SOCIAL_USER_NOT_FOUND = new ErrorCode(1002018002, "社交授权失败，找不到对应的用户");
 
     // ========== 系统敏感词 1002019000 =========
     ErrorCode SENSITIVE_WORD_NOT_EXISTS = new ErrorCode(1002019000, "系统敏感词在所有标签中都不存在");
