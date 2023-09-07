@@ -94,10 +94,6 @@ framework:
       # 验证码相关路
       - /captcha/get
       - /captcha/check
-
-debug: false
-
-
 #################### 验证码相关配置 ####################
 # 更多关于验证码的配置项可查看官方文档 https://ajcaptcha.beliefteam.cn/captcha-doc/
 aj:
@@ -124,3 +120,9 @@ aj:
     # verify 接口一分钟内请求数限制
     req-verify-minute-limit: 60
     slip-offset: 15
+#
+management:
+  endpoint:
+    health:
+      # 开启健康检查详细信息
+      show-details: always
