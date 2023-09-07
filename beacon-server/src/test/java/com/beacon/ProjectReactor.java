@@ -31,9 +31,9 @@ public class ProjectReactor {
 
 
     /**
-     * 该字段为前端项目中的内容，若需要修改请将前端项目放置项目根目录
+     * 该字段为前端项目中的内容，若需要修改请将前端项目放置于项目根目录下
      * */
-    private static final String TITLE = "BeaconBoot快速开发脚手架";
+    private static final String TITLE = "Beacon-Boot快速开发脚手架";
 
     /**
      * 白名单文件，不进行重写，避免出问题
@@ -55,16 +55,21 @@ public class ProjectReactor {
         String titleNew = "超市管理系统";
         //生成的新项目名称
         String projectName = "hello-boot";
+        //项目生成路径
+        String newProjectBaseDir = "D:/" + projectName;
+
 
 
         String projectBaseDir = getProjectBaseDir();
-        log.info("[main][原项目路劲改地址 ({})]", projectBaseDir);
+        log.info("[main][原项目路径改地址 ({})]", projectBaseDir);
 
         //抹掉原项目路径中的名字
-        int i = projectBaseDir.lastIndexOf(separator);
-        String projectBaseDirWithoutName = StrUtil.sub(projectBaseDir, 0, i + 1);
+        //int i = projectBaseDir.lastIndexOf(separator);
+        //String projectBaseDirWithoutName = StrUtil.sub(projectBaseDir, 0, i + 1);
         //新路径
-        String newProjectBaseDir = projectBaseDirWithoutName + projectName;
+        //String newProjectBaseDir = projectBaseDirWithoutName + projectName;
+
+
         log.info("[main][检测新项目目录 ({})是否存在]", newProjectBaseDir);
         if (FileUtil.exist(newProjectBaseDir)) {
             log.error("[main][新项目目录检测 ({})已存在，请更改新的目录！程序退出]", newProjectBaseDir);
