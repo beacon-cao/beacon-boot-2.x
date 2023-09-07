@@ -7,11 +7,11 @@ BASE_PATH=/apps/beacon
 # 编译后 jar 的地址。部署时，Jenkins 会上传 jar 包到该目录下
 SOURCE_PATH=$BASE_PATH/build
 # 服务名称。同时约定部署服务的 jar 包名字也为它。
-SERVER_NAME=server
-# 环境
+SERVER_NAME=beacon
+# 服务启动激活的配置文件
 PROFILES_ACTIVE=prod
 # 健康检查 URL
-HEALTH_CHECK_URL=http://127.0.0.1:7525/actuator/health/
+HEALTH_CHECK_URL=http://127.0.0.1:7525/actuator/health
 
 # heapError 存放路径
 HEAP_ERROR_PATH=$BASE_PATH/heapError
