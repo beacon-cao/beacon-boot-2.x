@@ -3,7 +3,7 @@ set -e
 
 DATE=$(date +%Y%m%d%H%M)
 # 基础路径
-BASE_PATH=/apps/covid_monitor_server
+BASE_PATH=/apps/beacon
 # 编译后 jar 的地址。部署时，Jenkins 会上传 jar 包到该目录下
 SOURCE_PATH=$BASE_PATH/build
 # 服务名称。同时约定部署服务的 jar 包名字也为它。
