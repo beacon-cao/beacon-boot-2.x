@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 基于 Redis 实现验证码的存储
+ * SPI机制
  *
  * @author 星语
  */

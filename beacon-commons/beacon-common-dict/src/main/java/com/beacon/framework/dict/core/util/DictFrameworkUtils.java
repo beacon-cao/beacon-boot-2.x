@@ -1,10 +1,10 @@
 package com.beacon.framework.dict.core.util;
 
 import cn.hutool.core.util.ObjectUtil;
-import com.beacon.framework.common.core.KeyValue;
-import com.beacon.framework.common.util.cache.CacheUtils;
 import com.beacon.business.system.api.dict.DictDataApi;
 import com.beacon.business.system.api.dict.dto.DictDataRespDTO;
+import com.beacon.framework.common.core.KeyValue;
+import com.beacon.framework.common.util.cache.CacheUtils;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import lombok.SneakyThrows;
@@ -52,6 +52,9 @@ public class DictFrameworkUtils {
 
             });
 
+    /**
+     * 初始化 DictFrameworkUtils
+     * */
     public static void init(DictDataApi dictDataApi) {
         DictFrameworkUtils.dictDataApi = dictDataApi;
         log.info("[init][初始化 DictFrameworkUtils 成功]");
