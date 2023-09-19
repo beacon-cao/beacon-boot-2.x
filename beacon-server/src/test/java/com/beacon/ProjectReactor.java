@@ -114,15 +114,14 @@ public class ProjectReactor {
     private static Collection<File> listFiles(String projectBaseDir) {
         Collection<File> files = FileUtils.listFiles(new File(projectBaseDir), null, true);
         // 移除 IDEA、Git 自身的文件、Node 编译出来的文件
-        files = files.stream()
-                .filter(file -> !file.getPath().contains(separator + "target" + separator)
+        files = files.stream().filter(file -> !file.getPath().contains(separator + "target" + separator)
                         && !file.getPath().contains(separator + "node_modules" + separator)
                         && !file.getPath().contains(separator + ".idea" + separator)
                         && !file.getPath().contains(separator + ".git" + separator)
                         && !file.getPath().contains(separator + "dist" + separator)
                         && !file.getPath().contains(".iml")
-                        && !file.getPath().contains(".html.gz"))
-                .collect(Collectors.toList());
+                        && !file.getPath().contains(".html.gz")
+        ).collect(Collectors.toList());
         return files;
     }
 
