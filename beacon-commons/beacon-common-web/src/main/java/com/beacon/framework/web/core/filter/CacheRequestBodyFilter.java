@@ -1,5 +1,6 @@
 package com.beacon.framework.web.core.filter;
 
+import cn.hutool.core.util.StrUtil;
 import com.beacon.framework.common.util.servlet.ServletUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -24,7 +25,14 @@ public class CacheRequestBodyFilter extends OncePerRequestFilter {
 
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
-        // 只处理 json 请求内容
+
+        //不缓存 springboot admin 的请求
+        String requestURI = request.getRequestURI();
+        if (StrUtil.startWith(requestURI, "/admin/instance")) {
+            return true;
+        }
+
+        // 判断请求内容是否为 json ，只处理 json 请求内容
         return !ServletUtils.isJsonRequest(request);
     }
 

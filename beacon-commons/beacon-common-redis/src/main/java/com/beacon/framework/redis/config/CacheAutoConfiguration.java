@@ -16,7 +16,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 @AutoConfiguration
 @EnableConfigurationProperties({CacheProperties.class})
 @EnableCaching
-public class YudaoCacheAutoConfiguration {
+public class CacheAutoConfiguration {
 
     /**
      * RedisCacheConfiguration Bean

@@ -1,0 +1,2 @@
+com.beacon.framework.protection.idempotent.config.IdempotentConfiguration
+com.beacon.framework.protection.lock4j.config.Lock4jConfiguration

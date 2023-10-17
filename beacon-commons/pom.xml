@@ -29,6 +29,7 @@
         <module>beacon-common-file</module>
         <module>beacon-common-flowable</module>
         <module>beacon-common-desensitize</module>
+        <module>beacon-common-protection</module>
     </modules>
 
 

@@ -9,7 +9,7 @@ import com.beacon.framework.mq.core.interceptor.RedisMessageInterceptor;
 import com.beacon.framework.mq.core.pubsub.AbstractChannelMessageListener;
 import com.beacon.framework.mq.core.stream.AbstractStreamMessageListener;
 import com.beacon.framework.mq.job.RedisPendingMessageResendJob;
-import com.beacon.framework.redis.config.YudaoRedisAutoConfiguration;
+import com.beacon.framework.redis.config.RedisAutoConfiguration;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Value;
@@ -39,7 +39,7 @@ import java.util.Properties;
  */
 @Slf4j
 @EnableScheduling // 启用定时任务，用于 RedisPendingMessageResendJob 重发消息
-@AutoConfiguration(after = YudaoRedisAutoConfiguration.class)
+@AutoConfiguration(after = RedisAutoConfiguration.class)
 public class MQAutoConfiguration {
 
     @Bean
