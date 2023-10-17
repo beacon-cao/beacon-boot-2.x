@@ -1,2 +1,2 @@
-com.beacon.framework.quartz.config.YudaoQuartzAutoConfiguration
-com.beacon.framework.quartz.config.YudaoAsyncAutoConfiguration
+com.beacon.framework.quartz.config.QuartzAutoConfiguration
+com.beacon.framework.quartz.config.AsyncAutoConfiguration

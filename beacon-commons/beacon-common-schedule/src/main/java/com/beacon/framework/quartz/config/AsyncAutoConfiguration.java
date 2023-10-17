@@ -13,7 +13,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
  */
 @AutoConfiguration
 @EnableAsync
-public class YudaoAsyncAutoConfiguration {
+public class AsyncAutoConfiguration {
 
     @Bean
     public BeanPostProcessor threadPoolTaskExecutorBeanPostProcessor() {

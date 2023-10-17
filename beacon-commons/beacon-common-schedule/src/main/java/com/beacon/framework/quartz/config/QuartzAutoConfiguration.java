@@ -11,7 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @AutoConfiguration
 @EnableScheduling // 开启 Spring 自带的定时任务
-public class YudaoQuartzAutoConfiguration {
+public class QuartzAutoConfiguration {
 
     @Bean
     public SchedulerManager schedulerManager(Scheduler scheduler) {
