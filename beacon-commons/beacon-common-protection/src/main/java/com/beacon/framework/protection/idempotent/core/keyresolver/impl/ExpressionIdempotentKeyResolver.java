@@ -53,8 +53,7 @@ public class ExpressionIdempotentKeyResolver implements IdempotentKeyResolver {
 
         // 处理，声明在接口上的情况
         try {
-            return point.getTarget().getClass().getDeclaredMethod(
-                    point.getSignature().getName(), method.getParameterTypes());
+            return point.getTarget().getClass().getDeclaredMethod(point.getSignature().getName(), method.getParameterTypes());
         } catch (NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
