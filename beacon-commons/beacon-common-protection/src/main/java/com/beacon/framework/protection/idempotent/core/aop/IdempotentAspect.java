@@ -32,6 +32,9 @@ public class IdempotentAspect {
 
     private final IdempotentRedisDAO idempotentRedisDAO;
 
+    /**
+     * 构造函数
+     * */
     public IdempotentAspect(List<IdempotentKeyResolver> keyResolvers, IdempotentRedisDAO idempotentRedisDAO) {
         this.keyResolvers = CollectionUtils.convertMap(keyResolvers, IdempotentKeyResolver::getClass);
         this.idempotentRedisDAO = idempotentRedisDAO;

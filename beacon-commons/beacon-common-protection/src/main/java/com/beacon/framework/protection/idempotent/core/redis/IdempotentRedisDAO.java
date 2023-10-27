@@ -17,8 +17,7 @@ import static com.beacon.framework.redis.core.RedisKeyDefine.KeyTypeEnum.STRING;
 @AllArgsConstructor
 public class IdempotentRedisDAO {
 
-    private static final RedisKeyDefine IDEMPOTENT = new RedisKeyDefine("幂等操作",
-            "idempotent:%s", // 参数为 uuid
+    private static final RedisKeyDefine IDEMPOTENT = new RedisKeyDefine("幂等操作", "idempotent:%s", // 参数为 uuid
             STRING, String.class, RedisKeyDefine.TimeoutTypeEnum.DYNAMIC);
 
     private final StringRedisTemplate redisTemplate;

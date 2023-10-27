@@ -22,6 +22,12 @@
 
         <dependency>
             <groupId>com.beacon.boot</groupId>
+            <artifactId>beacon-common-protection</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beacon.boot</groupId>
             <artifactId>beacon-business-system-api</artifactId>
             <version>${revision}</version>
         </dependency>
