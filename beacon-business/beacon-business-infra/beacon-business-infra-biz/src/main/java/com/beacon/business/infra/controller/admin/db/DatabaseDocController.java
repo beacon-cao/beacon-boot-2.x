@@ -35,8 +35,7 @@ public class DatabaseDocController {
     @Resource
     private DynamicDataSourceProperties dynamicDataSourceProperties;
 
-    private static final String FILE_OUTPUT_DIR = System.getProperty("java.io.tmpdir") + File.separator
-            + "db-doc";
+    private static final String FILE_OUTPUT_DIR = System.getProperty("java.io.tmpdir") + File.separator + "db-doc";
     private static final String DOC_FILE_NAME = "数据库文档";
     private static final String DOC_VERSION = "1.0.0";
     private static final String DOC_DESCRIPTION = "文档描述";
@@ -44,29 +43,25 @@ public class DatabaseDocController {
     @GetMapping("/export-html")
     @Operation(summary = "导出 html 格式的数据文档")
     @Parameter(name = "deleteFile", description = "是否删除在服务器本地生成的数据库文档", example = "true")
-    public void exportHtml(@RequestParam(defaultValue = "true") Boolean deleteFile,
-                           HttpServletResponse response) throws IOException {
+    public void exportHtml(@RequestParam(defaultValue = "true") Boolean deleteFile, HttpServletResponse response) throws IOException {
         doExportFile(EngineFileType.HTML, deleteFile, response);
     }
 
     @GetMapping("/export-word")
     @Operation(summary = "导出 word 格式的数据文档")
     @Parameter(name = "deleteFile", description = "是否删除在服务器本地生成的数据库文档", example = "true")
-    public void exportWord(@RequestParam(defaultValue = "true") Boolean deleteFile,
-                           HttpServletResponse response) throws IOException {
+    public void exportWord(@RequestParam(defaultValue = "true") Boolean deleteFile, HttpServletResponse response) throws IOException {
         doExportFile(EngineFileType.WORD, deleteFile, response);
     }
 
     @GetMapping("/export-markdown")
     @Operation(summary = "导出 markdown 格式的数据文档")
     @Parameter(name = "deleteFile", description = "是否删除在服务器本地生成的数据库文档", example = "true")
-    public void exportMarkdown(@RequestParam(defaultValue = "true") Boolean deleteFile,
-                               HttpServletResponse response) throws IOException {
+    public void exportMarkdown(@RequestParam(defaultValue = "true") Boolean deleteFile, HttpServletResponse response) throws IOException {
         doExportFile(EngineFileType.MD, deleteFile, response);
     }
 
-    private void doExportFile(EngineFileType fileOutputType, Boolean deleteFile,
-                              HttpServletResponse response) throws IOException {
+    private void doExportFile(EngineFileType fileOutputType, Boolean deleteFile, HttpServletResponse response) throws IOException {
         String docFileName = DOC_FILE_NAME + "_" + IdUtil.fastSimpleUUID();
         String filePath = doExportFile(fileOutputType, docFileName);
         String downloadFileName = DOC_FILE_NAME + fileOutputType.getFileSuffix(); //下载后的文件名
