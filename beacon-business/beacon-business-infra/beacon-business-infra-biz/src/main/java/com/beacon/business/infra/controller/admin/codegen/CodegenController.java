@@ -125,8 +125,7 @@ public class CodegenController {
     @GetMapping("/download")
     @Parameter(name = "tableId", description = "表编号", required = true, example = "1024")
     @PreAuthorize("@security.hasPermission('infra:codegen:download')")
-    public void downloadCodegen(@RequestParam("tableId") Long tableId,
-                                HttpServletResponse response) throws IOException {
+    public void downloadCodegen(@RequestParam("tableId") Long tableId, HttpServletResponse response) throws IOException {
         // 生成代码
         Map<String, String> codes = codegenService.generationCodes(tableId);
         // 构建 zip 包

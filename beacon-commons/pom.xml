@@ -27,7 +27,6 @@
         <module>beacon-common-captcha</module>
         <module>beacon-common-mq</module>
         <module>beacon-common-file</module>
-        <module>beacon-common-flowable</module>
         <module>beacon-common-desensitize</module>
         <module>beacon-common-protection</module>
     </modules>
