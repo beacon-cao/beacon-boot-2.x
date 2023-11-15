@@ -20,7 +20,6 @@
     <modules>
         <module>beacon-business-system</module>
         <module>beacon-business-infra</module>
-        <module>beacon-business-bmp</module>
     </modules>
 
 
