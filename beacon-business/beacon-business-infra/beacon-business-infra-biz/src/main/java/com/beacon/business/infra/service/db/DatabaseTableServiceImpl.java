@@ -31,9 +31,12 @@ public class DatabaseTableServiceImpl implements DatabaseTableService {
     @Override
     public List<TableInfo> getTableList(Long dataSourceConfigId, String nameLike, String commentLike) {
         List<TableInfo> tables = getTableList0(dataSourceConfigId, null);
-        return tables.stream().filter(tableInfo -> (StrUtil.isEmpty(nameLike) || tableInfo.getName().contains(nameLike))
-                        && (StrUtil.isEmpty(commentLike) || tableInfo.getComment().contains(commentLike)))
-                .collect(Collectors.toList());
+        return tables.stream().filter(
+                tableInfo -> (StrUtil.isEmpty(nameLike)
+                        || tableInfo.getName().contains(nameLike))
+                        && (StrUtil.isEmpty(commentLike)
+                        || tableInfo.getComment().contains(commentLike))
+                ).collect(Collectors.toList());
     }
 
     @Override
@@ -47,8 +50,7 @@ public class DatabaseTableServiceImpl implements DatabaseTableService {
         Assert.notNull(config, "数据源({}) 不存在！", dataSourceConfigId);
 
         // 使用 MyBatis Plus Generator 解析表结构
-        DataSourceConfig dataSourceConfig = new DataSourceConfig.Builder(config.getUrl(), config.getUsername(),
-                config.getPassword()).build();
+        DataSourceConfig dataSourceConfig = new DataSourceConfig.Builder(config.getUrl(), config.getUsername(), config.getPassword()).build();
         StrategyConfig.Builder strategyConfig = new StrategyConfig.Builder();
         if (StrUtil.isNotEmpty(name)) {
             strategyConfig.addInclude(name);
@@ -58,8 +60,7 @@ public class DatabaseTableServiceImpl implements DatabaseTableService {
         }
 
         GlobalConfig globalConfig = new GlobalConfig.Builder().dateType(DateType.TIME_PACK).build(); // 只使用 Date 类型，不使用 LocalDate
-        ConfigBuilder builder = new ConfigBuilder(null, dataSourceConfig, strategyConfig.build(),
-                null, globalConfig, null);
+        ConfigBuilder builder = new ConfigBuilder(null, dataSourceConfig, strategyConfig.build(), null, globalConfig, null);
         // 按照名字排序
         List<TableInfo> tables = builder.getTableInfoList();
         tables.sort(Comparator.comparing(TableInfo::getName));
