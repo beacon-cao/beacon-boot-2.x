@@ -72,9 +72,9 @@ spring:
   # Redis 配置。Redisson 默认的配置足够使用，一般不需要进行调优
   redis:
     host: 192.168.109.100 # 地址
-    port: 6379 # 端口
+    port: 6389 # 端口
     database: 0 # 数据库索引
-    password: 123456 # 密码，建议生产环境开启
+    #password: 123456 # 密码，建议生产环境开启
 
 #################### 接口文档配置 ####################
 springdoc:
@@ -167,11 +167,8 @@ logging:
     name: ${user.home}/logs/${spring.application.name}.log
   level:
     # 配置自己写的 MyBatis Mapper 打印日志
-    com.beacon.business.bpm.dal.mysql: debug
     com.beacon.business.infra.dal.mysql: debug
     com.beacon.business.infra.dal.mysql.job.JobLogMapper: INFO # 配置 JobLogMapper 的日志级别为 info
-    com.beacon.business.pay.dal.mysql: debug
-    com.beacon.business.pay.dal.mysql.notify.PayNotifyTaskMapper: INFO # 配置 JobLogMapper 的日志级别为 info
     com.beacon.business.system.dal.mysql: debug
     com.beacon.business.tool.dal.mysql: debug
 

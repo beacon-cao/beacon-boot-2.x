@@ -32,7 +32,7 @@ public class MyBatisUtils {
         // 页码 + 数量
         Page<T> page = new Page<>(pageParam.getPageNo(), pageParam.getPageSize());
         // 排序字段
-        if (!CollectionUtil.isEmpty(sortingFields)) {
+        if (CollectionUtil.isNotEmpty(sortingFields)) {
             page.addOrder(sortingFields.stream()
                     .map(sortingField -> SortingField.ORDER_ASC.equals(sortingField.getOrder()) ? OrderItem.asc(sortingField.getField()) : OrderItem.desc(sortingField.getField()))
                     .collect(Collectors.toList()));

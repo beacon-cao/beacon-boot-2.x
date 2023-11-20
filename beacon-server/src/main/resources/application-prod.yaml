@@ -159,11 +159,8 @@ logging:
     name: ${user.home}/logs/${spring.application.name}.log
   level:
     # 配置自己写的 MyBatis Mapper 打印日志
-    com.beacon.business.bpm.dal.mysql: debug
     com.beacon.business.infra.dal.mysql: debug
     com.beacon.business.infra.dal.mysql.job.JobLogMapper: INFO # 配置 JobLogMapper 的日志级别为 info
-    com.beacon.business.pay.dal.mysql: debug
-    com.beacon.business.pay.dal.mysql.notify.PayNotifyTaskMapper: INFO # 配置 JobLogMapper 的日志级别为 info
     com.beacon.business.system.dal.mysql: info
     com.beacon.business.tool.dal.mysql: debug
 debug: false

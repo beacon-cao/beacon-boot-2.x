@@ -60,7 +60,7 @@ public class WebSecurityConfigurerAdapter {
     /**
      * 自定义的权限映射 Bean 们
      *
-     * @see #configure(HttpSecurity)
+     * @see HttpSecurity
      */
     @Resource
     private List<AuthorizeRequestsCustomizer> authorizeRequestsCustomizers;
