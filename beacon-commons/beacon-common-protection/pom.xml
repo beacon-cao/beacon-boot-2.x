@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.beacon.boot</groupId>
         <artifactId>beacon-commons</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>beacon-common-protection</artifactId>
