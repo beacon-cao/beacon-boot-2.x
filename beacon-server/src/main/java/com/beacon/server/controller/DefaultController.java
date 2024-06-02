@@ -1,6 +1,6 @@
 package com.beacon.server.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.security.PermitAll;
@@ -14,7 +14,7 @@ import javax.annotation.security.PermitAll;
 public class DefaultController {
 
     @PermitAll
-    @GetMapping("/hello")
+    @PostMapping("/hello")
     public String hello() {
         return "hi";
     }

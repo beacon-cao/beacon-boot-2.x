@@ -4,7 +4,7 @@ spring:
     name: beacon-server
   # 激活配置文件
   profiles:
-    active: local
+    active: dev
   main:
     # 允许循环依赖，因为项目是三层架构，无法避免这个情况。
     allow-circular-references: true

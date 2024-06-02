@@ -1,7 +1,6 @@
 package com.beacon.business.system.controller.admin.auth;
 
 import cn.hutool.core.util.StrUtil;
-import com.baomidou.dynamic.datasource.annotation.Master;
 import com.beacon.business.system.controller.admin.auth.vo.AuthLoginReqVO;
 import com.beacon.business.system.controller.admin.auth.vo.AuthLoginRespVO;
 import com.beacon.business.system.controller.admin.auth.vo.AuthMenuRespVO;
@@ -114,8 +113,10 @@ public class AuthController {
         Set<Long> roleIds = permissionService.getUserRoleIdsFromCache(getLoginUserId(), singleton(CommonStatusEnum.ENABLE.getStatus()));
         // 获得用户拥有的菜单列表
         List<MenuDO> menuList = permissionService.getRoleMenuListFromCache(roleIds,
-                SetUtils.asSet(MenuTypeEnum.DIR.getType(), MenuTypeEnum.MENU.getType()), // 只要目录和菜单类型
-                singleton(CommonStatusEnum.ENABLE.getStatus())); // 只要开启的
+                // 只要目录和菜单类型
+                SetUtils.asSet(MenuTypeEnum.DIR.getType(), MenuTypeEnum.MENU.getType()),
+                // 只要开启的
+                singleton(CommonStatusEnum.ENABLE.getStatus()));
         // 转换成 Tree 结构返回
         return success(AuthConvert.INSTANCE.buildMenuTree(menuList));
     }
