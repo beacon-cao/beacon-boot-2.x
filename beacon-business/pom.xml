@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.beacon.boot</groupId>
-        <artifactId>beacon-boot</artifactId>
+        <artifactId>beacon-boot-2.x</artifactId>
         <version>${revision}</version>
     </parent>
 

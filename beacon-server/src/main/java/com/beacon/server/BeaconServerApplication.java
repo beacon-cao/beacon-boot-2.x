@@ -8,9 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * @author Beacon
  */
-//关闭idea的提示
-@SuppressWarnings("SpringComponentScan")
-//SpringBoot启动类
 @SpringBootApplication(scanBasePackages = {"${framework.info.base-package}.server","${framework.info.base-package}.business"})
 public class BeaconServerApplication {
 
