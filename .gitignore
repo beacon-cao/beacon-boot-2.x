@@ -1,17 +1,13 @@
 ######################################################################
-# Build Tools
-
-.gradle
-/build/
-!gradle/wrapper/gradle-wrapper.jar
-
+# Maven
 target/
-!.mvn/wrapper/maven-wrapper.jar
+*.flattened-pom.xml
+dependency-reduced-pom.xml
 
 ######################################################################
 # IDE
 
-### STS ###
+### Spring Tool Suite (STS) ###
 .apt_generated
 .classpath
 .factorypath
@@ -27,23 +23,30 @@ target/
 
 ### NetBeans ###
 nbproject/private/
-build/*
 nbbuild/
 dist/
 nbdist/
 .nb-gradle/
 
 ######################################################################
-# Others
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+######################################################################
+# Logs & Temp
 *.log
-*.xml.versionsBackup
+*.log.*
 *.swp
+*.tmp
+*~
 
-!*/build/*.java
-!*/build/*.html
-!*/build/*.xml
-
-### JRebel ###
+######################################################################
+# Misc
+*.xml.versionsBackup
 rebel.xml
 
+# Personal dev config (keep local overrides out of repo)
 application-my.yaml
