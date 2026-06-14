@@ -33,7 +33,7 @@ public class NotifyMessageBaseVO {
     @NotNull(message = "模板编码不能为空")
     private String templateCode;
 
-    @Schema(description = "模版发送人名称", required = true, example = "芋艿")
+    @Schema(description = "模版发送人名称", required = true, example = "beacon")
     @NotNull(message = "模版发送人名称不能为空")
     private String templateNickname;
 

@@ -35,7 +35,7 @@ public class OperateLogBaseVO {
     @NotNull(message = "操作分类不能为空")
     private Integer type;
 
-    @Schema(description = "操作明细", example = "修改编号为 1 的用户信息，将性别从男改成女，将姓名从芋道改成源码。")
+    @Schema(description = "操作明细", example = "修改编号为 1 的用户信息，将性别从男改成女，将姓名从beacon改成open-beacon。")
     private String content;
 
     @Schema(description = "拓展字段", example = "{'orderId': 1}")
@@ -57,7 +57,7 @@ public class OperateLogBaseVO {
     @NotEmpty(message = "浏览器 UserAgent 不能为空")
     private String userAgent;
 
-    @Schema(description = "Java 方法名", required = true, example = "cn.iocoder.yudao.adminserver.UserController.save(...)")
+    @Schema(description = "Java 方法名", required = true, example = "com.beacon.business.system.controller.admin.user.UserController.save(...)")
     @NotEmpty(message = "Java 方法名不能为空")
     private String javaMethod;
 

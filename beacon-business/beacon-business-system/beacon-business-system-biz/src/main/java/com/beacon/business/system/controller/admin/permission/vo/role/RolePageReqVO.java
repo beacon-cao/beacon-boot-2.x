@@ -15,10 +15,10 @@ import static com.beacon.framework.common.util.date.DateUtils.FORMAT_YEAR_MONTH_
 @EqualsAndHashCode(callSuper = true)
 public class RolePageReqVO extends PageParam {
 
-    @Schema(description = "角色名称,模糊匹配", example = "芋道")
+    @Schema(description = "角色名称,模糊匹配", example = "beacon")
     private String name;
 
-    @Schema(description = "角色标识,模糊匹配", example = "yudao")
+    @Schema(description = "角色标识,模糊匹配", example = "beacon")
     private String code;
 
     @Schema(description = "展示状态,参见 CommonStatusEnum 枚举类", example = "1")

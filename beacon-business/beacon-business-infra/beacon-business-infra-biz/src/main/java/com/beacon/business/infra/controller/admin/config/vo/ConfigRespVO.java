@@ -16,7 +16,7 @@ public class ConfigRespVO extends ConfigBaseVO {
     @Schema(description = "参数配置序号", required = true, example = "1024")
     private Long id;
 
-    @Schema(description = "参数键名", required = true, example = "yunai.db.username")
+    @Schema(description = "参数键名", required = true, example = "beacon.db.username")
     @NotBlank(message = "参数键名长度不能为空")
     @Size(max = 100, message = "参数键名长度不能超过100个字符")
     private String key;

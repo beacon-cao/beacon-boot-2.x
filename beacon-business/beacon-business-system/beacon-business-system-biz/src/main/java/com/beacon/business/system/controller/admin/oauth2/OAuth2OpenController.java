@@ -211,7 +211,7 @@ public class OAuth2OpenController {
             @Parameter(name = "response_type", required = true, description = "响应类型", example = "code"),
             @Parameter(name = "client_id", required = true, description = "客户端编号", example = "tudou"),
             @Parameter(name = "scope", description = "授权范围", example = "userinfo.read"), // 使用 Map<String, Boolean> 格式，Spring MVC 暂时不支持这么接收参数
-            @Parameter(name = "redirect_uri", required = true, description = "重定向 URI", example = "https://www.iocoder.cn"),
+            @Parameter(name = "redirect_uri", required = true, description = "重定向 URI", example = "https://www.open-beacon.cn"),
             @Parameter(name = "auto_approve", required = true, description = "用户是否接受", example = "true"),
             @Parameter(name = "state", example = "1")
     })

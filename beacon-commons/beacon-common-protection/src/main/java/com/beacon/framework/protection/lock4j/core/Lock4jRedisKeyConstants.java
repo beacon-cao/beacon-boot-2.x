@@ -9,7 +9,7 @@ import static com.beacon.framework.redis.core.RedisKeyDefine.KeyTypeEnum.HASH;
 /**
  * Lock4j Redis Key 枚举类
  *
- * @author 芋道源码
+ * @author beacon
  */
 public interface Lock4jRedisKeyConstants {
 

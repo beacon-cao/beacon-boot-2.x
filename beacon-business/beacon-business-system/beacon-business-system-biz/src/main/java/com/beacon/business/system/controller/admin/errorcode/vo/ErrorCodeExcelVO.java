@@ -19,7 +19,7 @@ public class ErrorCodeExcelVO {
     private Long id;
 
     @ExcelProperty(value = "错误码类型", converter = DictConvert.class)
-    @DictFormat("inf_error_code_type") // TODO 芋艿：得思考下杂解决枚举值
+    @DictFormat("inf_error_code_type") // TODO beacon：得思考下杂解决枚举值
     private Integer type;
 
     @ExcelProperty("应用名")

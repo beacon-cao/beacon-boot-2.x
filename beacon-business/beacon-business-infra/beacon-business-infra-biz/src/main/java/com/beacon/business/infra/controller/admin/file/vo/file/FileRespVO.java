@@ -15,13 +15,13 @@ public class FileRespVO {
     @Schema(description = "配置编号", required = true, example = "11")
     private Long configId;
 
-    @Schema(description = "文件路径", required = true, example = "yudao.jpg")
+    @Schema(description = "文件路径", required = true, example = "beacon.jpg")
     private String path;
 
-    @Schema(description = "原文件名", required = true, example = "yudao.jpg")
+    @Schema(description = "原文件名", required = true, example = "beacon.jpg")
     private String name;
 
-    @Schema(description = "文件 URL", required = true, example = "https://www.iocoder.cn/yudao.jpg")
+    @Schema(description = "文件 URL", required = true, example = "https://www.open-beacon.cn/beacon.jpg")
     private String url;
 
     @Schema(description = "文件MIME类型", example = "application/octet-stream")

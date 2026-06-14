@@ -72,9 +72,6 @@ framework:
   captcha:
     # 验证码的开关
     enable: true
-  codegen:
-    base-package: ${framework.info.base-package}
-    db-schemas: ${spring.datasource.dynamic.datasource.master.name}
   security:
     #无需登录的接口
     permit-all-urls:

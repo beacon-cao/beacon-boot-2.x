@@ -15,7 +15,7 @@ public class JobBaseVO {
     @NotNull(message = "任务名称不能为空")
     private String name;
 
-    @Schema(description = "处理器的参数", example = "yudao")
+    @Schema(description = "处理器的参数", example = "beacon")
     private String handlerParam;
 
     @Schema(description = "CRON 表达式", required = true, example = "0/10 * * * * ? *")

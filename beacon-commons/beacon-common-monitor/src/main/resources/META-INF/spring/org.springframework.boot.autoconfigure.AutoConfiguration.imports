@@ -1,2 +1,2 @@
-com.beacon.framework.tracer.config.YudaoTracerAutoConfiguration
-com.beacon.framework.tracer.config.YudaoMetricsAutoConfiguration
+com.beacon.framework.tracer.config.BeaconTracerAutoConfiguration
+com.beacon.framework.tracer.config.BeaconMetricsAutoConfiguration

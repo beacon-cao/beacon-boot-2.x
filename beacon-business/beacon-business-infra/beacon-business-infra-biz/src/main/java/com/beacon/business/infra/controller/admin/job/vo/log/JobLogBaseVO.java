@@ -23,7 +23,7 @@ public class JobLogBaseVO {
     @NotNull(message = "处理器的名字不能为空")
     private String handlerName;
 
-    @Schema(description = "处理器的参数", example = "yudao")
+    @Schema(description = "处理器的参数", example = "beacon")
     private String handlerParam;
 
     @Schema(description = "第几次执行", required = true, example = "1")

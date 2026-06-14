@@ -37,7 +37,7 @@ public class AuthPermissionInfoRespVO {
         @Schema(description = "用户昵称", required = true, example = "Beacon")
         private String nickname;
 
-        @Schema(description = "用户头像", required = true, example = "http://www.iocoder.cn/xx.jpg")
+        @Schema(description = "用户头像", required = true, example = "http://www.open-beacon.cn/xx.jpg")
         private String avatar;
 
     }

@@ -14,7 +14,7 @@ public class RoleSimpleRespVO {
     @Schema(description = "角色编号", required = true, example = "1024")
     private Long id;
 
-    @Schema(description = "角色名称", required = true, example = "芋道")
+    @Schema(description = "角色名称", required = true, example = "beacon")
     private String name;
 
 }

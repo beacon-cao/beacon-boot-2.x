@@ -13,15 +13,15 @@ import org.springframework.context.annotation.Bean;
 /**
  * Tracer 配置类
  *
- * @author mashu
+ * @author beacon
  */
 @AutoConfiguration
 @ConditionalOnClass({BizTraceAspect.class})
 @EnableConfigurationProperties(TracerProperties.class)
-@ConditionalOnProperty(prefix = "yudao.tracer", value = "enable", matchIfMissing = true)
-public class YudaoTracerAutoConfiguration {
+@ConditionalOnProperty(prefix = "beacon.tracer", value = "enable", matchIfMissing = true)
+public class BeaconTracerAutoConfiguration {
 
-    // TODO @芋艿：重要。目前 opentracing 版本存在冲突，要么保证 skywalking，要么保证阿里云短信 sdk
+    // TODO @beacon：重要。目前 opentracing 版本存在冲突，要么保证 skywalking，要么保证阿里云短信 sdk
 //    @Bean
 //    public TracerProperties bizTracerProperties() {
 //        return new TracerProperties();

@@ -47,28 +47,10 @@
             <artifactId>beacon-common-operatelog</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>cn.iocoder.boot</groupId>-->
-<!--            <artifactId>yudao-spring-boot-starter-biz-sms</artifactId>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>com.beacon.boot</groupId>
             <artifactId>beacon-common-dict</artifactId>
         </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>cn.iocoder.boot</groupId>-->
-<!--            <artifactId>yudao-spring-boot-starter-biz-data-permission</artifactId>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>cn.iocoder.boot</groupId>-->
-<!--            <artifactId>yudao-spring-boot-starter-biz-tenant</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>cn.iocoder.boot</groupId>-->
-<!--            <artifactId>yudao-spring-boot-starter-biz-ip</artifactId>-->
-<!--        </dependency>-->
 
         <!-- Web 相关 -->
         <dependency>
@@ -105,13 +87,6 @@
             <groupId>com.beacon.boot</groupId>
             <artifactId>beacon-common-mq</artifactId>
         </dependency>
-
-        <!-- Test 测试相关 -->
-<!--        <dependency>-->
-<!--            <groupId>cn.iocoder.boot</groupId>-->
-<!--            <artifactId>yudao-spring-boot-starter-test</artifactId>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
 
         <!-- 工具类相关 -->
         <dependency>

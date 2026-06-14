@@ -12,7 +12,7 @@ import static com.beacon.framework.redis.core.RedisKeyDefine.KeyTypeEnum.STRING;
 /**
  * 幂等 Redis DAO
  *
- * @author 芋道源码
+ * @author beacon
  */
 @AllArgsConstructor
 public class IdempotentRedisDAO {

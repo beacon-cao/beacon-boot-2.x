@@ -14,7 +14,7 @@ public class DeptSimpleRespVO {
     @Schema(description = "部门编号", required = true, example = "1024")
     private Long id;
 
-    @Schema(description = "部门名称", required = true, example = "芋道")
+    @Schema(description = "部门名称", required = true, example = "beacon")
     private String name;
 
     @Schema(description = "父部门 ID", required = true, example = "1024")

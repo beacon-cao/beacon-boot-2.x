@@ -149,7 +149,6 @@ public class ApiErrorLogDO extends BaseDO {
     /**
      * 处理用户编号
      *
-     * 关联 cn.iocoder.yudao.adminserver.modules.system.dal.dataobject.user.SysUserDO.SysUserDO#getId()
      */
     private Long processUserId;
 

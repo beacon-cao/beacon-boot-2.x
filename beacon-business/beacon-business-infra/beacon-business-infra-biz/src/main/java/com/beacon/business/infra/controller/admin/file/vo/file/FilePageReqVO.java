@@ -18,7 +18,7 @@ import static com.beacon.framework.common.util.date.DateUtils.FORMAT_YEAR_MONTH_
 @ToString(callSuper = true)
 public class FilePageReqVO extends PageParam {
 
-    @Schema(description = "文件路径,模糊匹配", example = "yudao")
+    @Schema(description = "文件路径,模糊匹配", example = "beacon")
     private String path;
 
     @Schema(description = "文件类型,模糊匹配", example = "application/octet-stream")

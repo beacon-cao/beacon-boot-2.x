@@ -14,7 +14,7 @@ public class OperateLogRespVO extends OperateLogBaseVO {
     @Schema(description = "日志编号", required = true, example = "1024")
     private Long id;
 
-    @Schema(description = "用户昵称", required = true, example = "芋艿")
+    @Schema(description = "用户昵称", required = true, example = "beacon")
     private String userNickname;
 
 }

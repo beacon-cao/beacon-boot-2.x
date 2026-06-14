@@ -14,7 +14,7 @@ public class PostSimpleRespVO {
     @Schema(description = "岗位编号", required = true, example = "1024")
     private Long id;
 
-    @Schema(description = "岗位名称", required = true, example = "芋道")
+    @Schema(description = "岗位名称", required = true, example = "beacon")
     private String name;
 
 }

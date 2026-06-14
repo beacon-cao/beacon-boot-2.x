@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * 定时任务日志 Convert
  *
- * @author 芋艿
+ * @author beacon
  */
 @Mapper
 public interface JobLogConvert {
