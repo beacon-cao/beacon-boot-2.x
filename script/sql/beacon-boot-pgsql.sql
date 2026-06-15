@@ -345,27 +345,21 @@ COMMENT ON COLUMN infra_api_error_log.exception_name IS '异常名
 -- Name: COLUMN infra_api_error_log.exception_message; Type: COMMENT; Schema: public; Owner: postgres
 --
 
-COMMENT ON COLUMN infra_api_error_log.exception_message IS '异常导致的消息
-     *
-     * {@link cn.iocoder.common.framework.util.ExceptionUtil#getMessage(Throwable)}';
+COMMENT ON COLUMN infra_api_error_log.exception_message IS '异常导致的消息';
 
 
 --
 -- Name: COLUMN infra_api_error_log.exception_root_cause_message; Type: COMMENT; Schema: public; Owner: postgres
 --
 
-COMMENT ON COLUMN infra_api_error_log.exception_root_cause_message IS '异常导致的根消息
-     *
-     * {@link cn.iocoder.common.framework.util.ExceptionUtil#getRootCauseMessage(Throwable)}';
+COMMENT ON COLUMN infra_api_error_log.exception_root_cause_message IS '异常导致的根消息';
 
 
 --
 -- Name: COLUMN infra_api_error_log.exception_stack_trace; Type: COMMENT; Schema: public; Owner: postgres
 --
 
-COMMENT ON COLUMN infra_api_error_log.exception_stack_trace IS '异常的栈轨迹
-     *
-     * {@link cn.iocoder.common.framework.util.ExceptionUtil#getServiceException(Exception)}';
+COMMENT ON COLUMN infra_api_error_log.exception_stack_trace IS '异常的栈轨迹';
 
 
 --
@@ -5502,7 +5496,7 @@ INSERT INTO infra_config (id, category, type, name, config_key, value, visible, 
 INSERT INTO infra_config (id, category, type, name, config_key, value, visible, remark, creator, create_time, updater, update_time, deleted) VALUES (3, 'ui', 1, '主框架页-侧边栏主题', 'sys.index.sideTheme', 'theme-dark', '0', '深色主题theme-dark，浅色主题theme-light', 'admin', '2021-01-05 17:03:48', '', '2021-01-19 03:05:21', 0);
 INSERT INTO infra_config (id, category, type, name, config_key, value, visible, remark, creator, create_time, updater, update_time, deleted) VALUES (4, '1', 2, 'xxx', 'demo.test', '10', '0', '5', '', '2021-01-19 03:10:26', '', '2021-01-20 09:25:55', 0);
 INSERT INTO infra_config (id, category, type, name, config_key, value, visible, remark, creator, create_time, updater, update_time, deleted) VALUES (5, 'xxx', 2, 'xxx', 'xxx', 'xxx', '1', 'xxx', '', '2021-02-09 20:06:47', '', '2021-02-09 20:06:47', 0);
-INSERT INTO infra_config (id, category, type, name, config_key, value, visible, remark, creator, create_time, updater, update_time, deleted) VALUES (6, 'biz', 2, '登陆验证码的开关', 'yudao.captcha.enable', 'true', '1', NULL, '1', '2022-02-17 00:03:11', '1', '2022-04-04 12:51:40', 0);
+INSERT INTO infra_config (id, category, type, name, config_key, value, visible, remark, creator, create_time, updater, update_time, deleted) VALUES (6, 'biz', 2, '登陆验证码的开关', 'framework.captcha.enable', 'true', '1', NULL, '1', '2022-02-17 00:03:11', '1', '2022-04-04 12:51:40', 0);
 
 
 --
