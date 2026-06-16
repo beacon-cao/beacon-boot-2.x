@@ -2,7 +2,6 @@ package com.beacon.business.system.dal.dataobject.errorcode;
 
 import com.beacon.framework.mybatis.core.dataobject.BaseDO;
 import com.beacon.business.system.enums.errorcode.ErrorCodeTypeEnum;
-import com.baomidou.mybatisplus.annotation.KeySequence;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -15,7 +14,6 @@ import lombok.ToString;
  * @author Beacon
  */
 @TableName(value = "system_error_code")
-@KeySequence("system_error_code_seq") // 用于 Oracle、PostgreSQL、Kingbase、DB2、H2 数据库的主键自增。如果是 MySQL 等数据库，可不写。
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

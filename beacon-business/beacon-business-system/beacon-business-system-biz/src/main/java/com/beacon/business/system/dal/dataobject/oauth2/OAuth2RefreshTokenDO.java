@@ -2,7 +2,6 @@ package com.beacon.business.system.dal.dataobject.oauth2;
 
 import com.beacon.framework.common.enums.UserTypeEnum;
 import com.beacon.framework.mybatis.core.dataobject.BaseDO;
-import com.baomidou.mybatisplus.annotation.KeySequence;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
@@ -20,7 +19,6 @@ import java.util.List;
  */
 @TableName(value = "system_oauth2_refresh_token", autoResultMap = true)
 // 由于 Oracle 的 SEQ 的名字长度有限制，所以就先用 system_oauth2_access_token_seq 吧，反正也没啥问题
-@KeySequence("system_oauth2_access_token_seq") // 用于 Oracle、PostgreSQL、Kingbase、DB2、H2 数据库的主键自增。如果是 MySQL 等数据库，可不写。
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)

@@ -2,7 +2,6 @@ package com.beacon.business.system.dal.dataobject.oauth2;
 
 import com.beacon.framework.common.enums.UserTypeEnum;
 import com.beacon.framework.mybatis.core.dataobject.BaseDO;
-import com.baomidou.mybatisplus.annotation.KeySequence;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
@@ -18,7 +17,6 @@ import java.util.List;
  * @author Beacon
  */
 @TableName(value = "system_oauth2_code", autoResultMap = true)
-@KeySequence("system_oauth2_code_seq") // 用于 Oracle、PostgreSQL、Kingbase、DB2、H2 数据库的主键自增。如果是 MySQL 等数据库，可不写。
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class OAuth2CodeDO extends BaseDO {

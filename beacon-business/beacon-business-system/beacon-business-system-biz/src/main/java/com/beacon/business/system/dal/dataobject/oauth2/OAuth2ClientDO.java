@@ -3,7 +3,6 @@ package com.beacon.business.system.dal.dataobject.oauth2;
 import com.beacon.framework.common.enums.CommonStatusEnum;
 import com.beacon.framework.mybatis.core.dataobject.BaseDO;
 import com.beacon.business.system.enums.oauth2.OAuth2GrantTypeEnum;
-import com.baomidou.mybatisplus.annotation.KeySequence;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -19,13 +18,12 @@ import java.util.List;
  * @author Beacon
  */
 @TableName(value = "system_oauth2_client", autoResultMap = true)
-@KeySequence("system_oauth2_client_seq") // 用于 Oracle、PostgreSQL、Kingbase、DB2、H2 数据库的主键自增。如果是 MySQL 等数据库，可不写。
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class OAuth2ClientDO extends BaseDO {
 
     /**
-     * 编号，数据库自增
+     * 编号，
      *
      * 由于 SQL Server 在存储 String 主键有点问题，所以暂时使用 Long 类型
      */

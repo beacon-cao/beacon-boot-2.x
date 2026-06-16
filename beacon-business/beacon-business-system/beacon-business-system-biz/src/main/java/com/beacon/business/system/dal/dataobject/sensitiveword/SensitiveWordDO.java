@@ -3,7 +3,6 @@ package com.beacon.business.system.dal.dataobject.sensitiveword;
 import com.beacon.framework.common.enums.CommonStatusEnum;
 import com.beacon.framework.mybatis.core.dataobject.BaseDO;
 import com.beacon.framework.mybatis.core.type.StringListTypeHandler;
-import com.baomidou.mybatisplus.annotation.KeySequence;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -17,7 +16,6 @@ import java.util.List;
  * @author Beacon
  */
 @TableName(value = "system_sensitive_word", autoResultMap = true)
-@KeySequence("system_sensitive_word_seq") // 用于 Oracle、PostgreSQL、Kingbase、DB2、H2 数据库的主键自增。如果是 MySQL 等数据库，可不写。
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

@@ -3,7 +3,6 @@ package com.beacon.business.infra.dal.dataobject.logger;
 import com.beacon.framework.common.enums.UserTypeEnum;
 import com.beacon.framework.mybatis.core.dataobject.BaseDO;
 import com.beacon.business.infra.enums.logger.ApiErrorLogProcessStatusEnum;
-import com.baomidou.mybatisplus.annotation.KeySequence;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
@@ -22,7 +21,6 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@KeySequence(value = "infra_api_error_log_seq")
 public class ApiErrorLogDO extends BaseDO {
 
     /**
