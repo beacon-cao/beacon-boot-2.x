@@ -2618,7 +2618,6 @@ INSERT INTO system_menu VALUES (109, '令牌管理', '', 2, 2, 1261, 'token', 'o
 INSERT INTO system_menu VALUES (110, '定时任务', '', 2, 12, 2, 'job', 'job', 'infra/job/index', 0, true, true, 'admin', '2021-01-05 17:03:48', '1', '2022-04-20 17:03:10', 0, NULL, true);
 INSERT INTO system_menu VALUES (112, 'Java 监控', '', 2, 11, 2, 'admin-server', 'server', 'infra/server/index', 0, true, true, 'admin', '2021-01-05 17:03:48', '1', '2022-04-20 17:03:10', 0, NULL, true);
 INSERT INTO system_menu VALUES (113, 'Redis 监控', '', 2, 10, 2, 'redis', 'redis', 'infra/redis/index', 0, true, true, 'admin', '2021-01-05 17:03:48', '1', '2022-04-20 17:03:10', 0, NULL, true);
-INSERT INTO system_menu VALUES (114, '表单构建', 'infra:build:list', 2, 2, 2, 'build', 'build', 'infra/build/index', 0, true, true, 'admin', '2021-01-05 17:03:48', '1', '2022-04-20 17:03:10', 0, NULL, true);
 INSERT INTO system_menu VALUES (116, '系统接口', 'infra:swagger:list', 2, 3, 2, 'swagger', 'swagger', 'infra/swagger/index', 0, true, true, 'admin', '2021-01-05 17:03:48', '1', '2022-04-20 17:03:10', 0, NULL, true);
 INSERT INTO system_menu VALUES (500, '操作日志', '', 2, 1, 108, 'operate-log', 'form', 'system/operatelog/index', 0, true, true, 'admin', '2021-01-05 17:03:48', '1', '2022-04-20 17:03:10', 0, NULL, true);
 INSERT INTO system_menu VALUES (501, '登录日志', '', 2, 2, 108, 'login-log', 'logininfor', 'system/loginlog/index', 0, true, true, 'admin', '2021-01-05 17:03:48', '1', '2022-04-20 17:03:10', 0, NULL, true);
