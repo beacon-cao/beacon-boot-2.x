@@ -2461,7 +2461,7 @@ INSERT INTO infra_config VALUES (6, 'biz', 2, '登陆验证码的开关', 'yudao
 
 
 
-INSERT INTO infra_file_config VALUES (18, 'database', 1, NULL, true, '{"@class":"com.beacon.framework.file.core.client.db.DBFileClientConfig","domain":"http://localhost:48080"}', '1', '2023-06-30 17:24:01', '1', '2023-07-06 16:39:01', 0);
+INSERT INTO infra_file_config VALUES (18, 'database', 1, NULL, true, '{"@class":"com.beacon.framework.file.core.client.db.DBFileClientConfig","domain":"http://localhost:7525"}', '1', '2023-06-30 17:24:01', '1', '2023-07-06 16:39:01', 0);
 
 
 
