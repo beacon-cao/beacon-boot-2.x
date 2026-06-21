@@ -172,7 +172,7 @@ framework:
   captcha:
     enable: true
   security:
-    mock-enable: true
+    mock-enable: false
   xss:
     enable: false
     exclude-urls: # 如下两个 url，仅仅是为了演示，去掉配置也没关系

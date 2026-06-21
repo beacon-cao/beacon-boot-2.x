@@ -33,6 +33,7 @@ import java.util.Set;
  * @author Beacon
  */
 @AutoConfiguration
+// 开启方法级的权限控制，使
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 public class WebSecurityConfigurerAdapter {
 
@@ -123,7 +124,7 @@ public class WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, permitAllUrls.get(HttpMethod.POST).toArray(new String[0])).permitAll()
                 .antMatchers(HttpMethod.PUT, permitAllUrls.get(HttpMethod.PUT).toArray(new String[0])).permitAll()
                 .antMatchers(HttpMethod.DELETE, permitAllUrls.get(HttpMethod.DELETE).toArray(new String[0])).permitAll()
-                // 1.3 基于配置文件 framework.security.permit-all-urls 设置的无需认证资源
+                // 1.3 基于配置文件 framework.security.permit-all-urls 设置的无需认证资源，Ant 风格路径匹配
                 .antMatchers(securityProperties.getPermitAllUrls().toArray(new String[0])).permitAll()
                 // 1.4 设置 App API 无需认证
                 .antMatchers(buildAppApi("/**")).permitAll()

@@ -73,7 +73,7 @@ framework:
     # 验证码的开关
     enable: true
   security:
-    #无需登录的接口
+    #无需登录的接口，Ant风格路径匹配。
     permit-all-urls:
       # 验证码相关路
       - /captcha/get
