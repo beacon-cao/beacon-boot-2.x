@@ -1,6 +1,5 @@
 package com.beacon.framework.web.core.util;
 
-import cn.hutool.core.util.StrUtil;
 import com.beacon.framework.common.enums.UserTypeEnum;
 import com.beacon.framework.common.pojo.CommonResult;
 import com.beacon.framework.web.config.WebProperties;
